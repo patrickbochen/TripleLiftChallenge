@@ -68,6 +68,8 @@ public class TripleLiftConnect {
 	
 	//Uses the ExecutorService on a list of GetUrl objects
 	//returns ArrayList of jsonString corresponding to the ids
+	//Note: the JSON format returned by the server, implies that there are no duplicate dates
+	// (no duplicates allowed in json)
 	//Note: ExecutorService automates multithreads, and also has a time cap ability
 	private static ArrayList<String> execute(ArrayList<Callable<String>> callables) throws InterruptedException {
 		
